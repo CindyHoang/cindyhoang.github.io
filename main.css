@@ -1,8 +1,8 @@
 /*  idTabs ~ Sean Catchpole  */
 
 
-/* Style for Usual tabs */
-.usual {
+/* Style for work tabs */
+.work {
   background:#181818;
   color:#111;
   padding:15px 20px;
@@ -10,8 +10,8 @@
   border:1px solid #222;
   margin:8px auto;
 }
-.usual li { list-style:none; float:left; }
-.usual ul a {
+.work li { list-style:none; float:left; }
+.work ul a {
   display:block;
   padding:6px 10px;
   text-decoration:none!important;
@@ -21,18 +21,18 @@
   color:#FFF;
   background:#444;
 }
-.usual ul a:hover {
+.work ul a:hover {
   color:#FFF;
   background:#111;
   }
-.usual ul a.selected {
+.work ul a.selected {
   margin-bottom:0;
   color:#000;
   background:snow;
   border-bottom:1px solid snow;
   cursor:default;
   }
-.usual div {
+.work div {
   padding:10px 10px 8px 10px;
   *padding-top:3px;
   *margin-top:-15px;
@@ -40,12 +40,12 @@
   background:snow;
   font:10pt Georgia;
 }
-.usual div a { color:#000; font-weight:bold; }
+.work div a { color:#000; font-weight:bold; }
 
-#usual2 { background:#0A0A0A; border:1px solid #1A1A1A; }
-#usual2 a { background:#222; }
-#usual2 a:hover { background:#000; }
-#usual2 a.selected { background:snow; }
+#work2 { background:#0A0A0A; border:1px solid #1A1A1A; }
+#work2 a { background:#222; }
+#work2 a:hover { background:#000; }
+#work2 a.selected { background:snow; }
 #tabs3 { background:#FF9; }
 
 /* Style for various uses of tabs */

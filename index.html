@@ -1,12 +1,23 @@
 <html>
 <head>
 <title>Cindy Hoang</title>
-<script type="text/javascript">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#content").hide();
+		$("#loading").delay(5000).fadeOut(0, function(){
+			$("#content").fadeIn();
+		});
+
+	});
 </script>
 <style type="text/css">
 	body{
 		font-family: Verdana, Arial, sans-serif;
 		overflow: hidden;
+	}
+	#loading{
+		margin-top: 25%;
 	}
 	h1{
 		font-size: 60px;
@@ -46,14 +57,19 @@
 </head>
 <body>
 <center>
-<h1>Cindy Hoang</h1>
-<ul>
-<li><a href="https://medium.com/@SyncCindy" target="_blank">Blog</a></li>
-<li><a href="https://www.facebook.com/IAmYourSuperHero" target="_blank">Facebook</a></li>
-<li><a href="https://github.com/CindyHoang" target="_blank">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/hoangcindy" target="_blank">LinkedIn</a></li>
-<li><a href="https://twitter.com/SyncCindy" target="_blank">Twitter</a></li>
-</ul>
+<div id="loading">
+	<img src="ajax-loader.gif">
+</div>
+<div id="content">
+	<h1>Cindy Hoang</h1>
+	<ul>
+	<li><a href="https://medium.com/@SyncCindy" target="_blank">Blog</a></li>
+	<li><a href="https://www.facebook.com/IAmYourSuperHero" target="_blank">Facebook</a></li>
+	<li><a href="https://github.com/CindyHoang" target="_blank">GitHub</a></li>
+	<li><a href="https://www.linkedin.com/in/hoangcindy" target="_blank">LinkedIn</a></li>
+	<li><a href="https://twitter.com/SyncCindy" target="_blank">Twitter</a></li>
+	</ul>
+</div>
 </center>
 </body>
 </html>

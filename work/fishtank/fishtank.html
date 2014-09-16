@@ -1,0 +1,205 @@
+<html>
+	<head>
+		<title>Fish Tank!</title>
+		<script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
+		<script type="text/processing" data-processing-target="mycanvas">	
+		var shark;
+		var crab;
+		
+		void setup(){
+			shark = new Shark(150, 50, [70,70,70], [250,247,248], 100, 100, 3, 3);
+			crab = new Crab(150, 70, [255,89,89], [255,255,255], [0,0,0], [255,177,59], 600, 600, 3, 3);
+			secondcrab = new Crab(150, 70, [247,27,27], [255,255,255], [0,0,0], [255,177,59], 300, 600, 7, 7);
+			size(1350,750);
+			background(10,100,250);
+		}
+		
+		void draw(){
+			background(10,100,250);
+			fill(235,255,80);
+			rect(0,600,1350,150);
+			shark.drawShark(); //draw the shark
+			crab.drawCrab();
+			secondcrab.drawCrab();
+			fill(160,160,160);
+			ellipse(1200,550,400,200);
+			ellipse(1000,600,200,100); 
+			ellipse(1100,650,100,50);
+			shark.move(); //make shark move
+			crab.moveCrab();
+			secondcrab.moveCrab();
+		}
+		
+		class Shark {
+			var x; //attributes
+			var y;
+			var w;
+			var h;
+			var r;
+			var g;
+			var b;
+			var r2;
+			var g2;
+			var b2;
+			var speedX;
+			var speedY;
+		
+			Shark(width, height, colorbody, colorface, xPosition, yPosition, xSpeed, ySpeed){
+				x = xPosition;
+				y = yPosition;
+				r = colorbody[0]; //colors assigned from list above
+				g = colorbody[1];
+				b = colorbody[2];
+				r2 = colorface[0];
+				g2 = colorface[1];
+				b2 = colorface[2];
+				w = width;
+				h = height;
+				speedX = xSpeed;
+				speedY = ySpeed;
+			}
+		
+			void drawShark(){
+				noStroke();
+				if(speedX < 0){
+					fill(r,g,b);
+					ellipse(x + 12, y + 6, w - 14, h + 5);
+					triangle(x - 51, y + 9, x - 82, y - 24, x - 108, y + 64);
+					triangle(x - 3, y + 57, x + 9, y + 33, x + 29, y + 32);
+					triangle(x + 35, y - 15, x - 10, y - 17, x - 8, y - 54);
+					fill (r2,g2,b2);
+					ellipse(x + 59, y - 11, w - 136, h - 34);
+					ellipse(x + 73, y - 10, w - 142, h - 40);
+					rect(x + 55, y - 1, w - 125, h - 34);
+				}
+				else{
+					fill(r,g,b);
+					ellipse(x - 12, y + 6, w - 14, h + 5);
+					triangle(x + 51, y + 9, x + 82, y - 24, x + 108, y + 64);
+					triangle(x + 3, y + 57, x - 9, y + 33, x - 29, y + 32);
+					triangle(x - 35, y - 15, x + 10, y - 17, x + 8, y - 54);
+					fill (r2,g2,b2);
+					ellipse(x - 59, y - 11, w - 136, h - 34);
+					ellipse(x - 73, y - 10, w - 142, h - 40);
+					rect(x - 80, y - 1, w - 125, h - 34);
+				}
+			}
+			
+			void move(speed){
+			
+				x -= speedX; 
+				//y -= speedY; 
+				
+				//touching a wall?
+				//left and right walls
+				if(x < w/2 || x > (1350-(w/2))){ //the || = or
+					//shark.transform("S-1,1");
+					speedX = speedX * -1;
+				}
+				
+				//top and bottom walls
+				//if(y < h/2 || y > (750 - (h/2))){
+					//speedY = speedY * -1;
+				//}
+			}
+		}
+		
+		class Crab {
+			var x; //attributes
+			var y;
+			var width;
+			var height;
+			var r;
+			var g;
+			var b;
+			var r2;
+			var g2;
+			var b2;
+			var r3;
+			var g3;
+			var b3;
+			var r4;
+			var g4;
+			var b4;
+			var speedX;
+			var speedY;
+		
+			Crab(w, h, colorbody, coloreyes, coloreyeballs, colormouth, xPosition, yPosition, xSpeed, ySpeed){
+				x = xPosition;
+				y = yPosition;
+				r = colorbody[0]; //colors assigned from list above
+				g = colorbody[1];
+				b = colorbody[2];
+				r2 = coloreyes[0];
+				g2 = coloreyes[1];
+				b2 = coloreyes[2];
+				r3 = coloreyeballs[0]; //colors assigned from list above
+				g3 = coloreyeballs[1];
+				b3 = coloreyeballs[2];
+				r4 = colormouth[0];
+				g4 = colormouth[1];
+				b4 = colormouth[2];
+				width = w;
+				height = h;
+				speedX = xSpeed;
+				speedY = ySpeed;
+			}
+			
+			void drawCrab(){
+				stroke(0,0,0);
+				
+				//legs
+				line(x + 40, y + 30, x + 60, y + 45);
+				line(x - 40, y + 30, x - 60, y + 45);
+				
+				//arms
+				line(x - 80, y - 35, x - 50, y - 5);
+				line(x + 80, y - 35, x + 50, y - 5);
+				
+				//body
+				fill(r,g,b);
+				ellipse(x, y, width, height);
+				
+				//hand
+				fill(r,g,b);
+				triangle(x - 95, y - 20, x - 70, y - 45, x - 95, y - 45);
+				triangle(x + 90, y - 20, x + 65, y - 45, x + 90, y - 45);
+				
+				//eyes
+				fill(r2,g2,b2);
+				ellipse(x - 25, y - 30, width - 100, height - 20);
+				ellipse(x + 25, y - 30, width - 100, height - 20);
+				
+				//eyeballs
+				fill(r3,g3,b3);
+				ellipse(x - 20, y - 40, width - 135, height - 55);
+				ellipse(x + 30, y - 40, width - 135, height - 55);
+				
+				//mouth
+				fill(r4,g4,b4);
+				triangle(x - 10, y, x + 10, y, x, y + 30);
+			}
+			
+			void moveCrab(){
+				x -= speedX;
+				//y -= speedY;
+				
+				//touching a wall?
+				//left and right walls
+				if(x < width/2 || x > (1350-(width/2))){ //the || = or
+					speedX = speedX * -1;
+				}
+				
+				//top and bottom walls
+				//if(y < height/2 || y > (750-(height/2))){
+					//speedY = speedY * -1;
+				//}
+			}
+		}
+		
+		</script>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>

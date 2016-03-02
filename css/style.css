@@ -57,21 +57,17 @@ h11 {
     font-family: 'Muli', sans-serif;
     color: white;
 }
-leftpew {
+pew {
     width:500px;
-    float:left;
-    padding:10px;
-}
-rightpew {
-    width:700px;
-    float:right;
+    left: 25%;
     padding:10px;
 }
 #jellybean {
     border-style: dashed;
     border-width: 5px;
     border-color: black;
-    margin-left: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 #socialmedia {
     top:10px;

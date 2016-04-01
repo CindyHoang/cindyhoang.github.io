@@ -36,8 +36,12 @@ h7 {
 h8 {
 }
 h9 {
-    margin-left: 50px;
-    margin-right: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    padding-top: 0.25px;
+    line-height: 2px;
+    color: white;
+    text-transform: uppercase;
 }
 h10 {
     text-transform: uppercase;
@@ -51,7 +55,8 @@ span {
     text-transform: uppercase;
     color: white;
     font-size: 35px;
-    margin-left: 100px;
+    margin-left: 12%;
+    margin-right: 88%;
 }
 h11 {
     font-family: 'Muli', sans-serif;
@@ -64,10 +69,11 @@ pew {
 }
 #jellybean {
     border-style: dashed;
-    border-width: 5px;
-    border-color: black;
+    border-width: 2px;
+    border-color: white;
     margin-left: 25%;
     margin-right: 25%;
+    padding: 5px;
 }
 #socialmedia {
     top:10px;

@@ -160,17 +160,18 @@
 <script>
 function banana(){
         var command = document.getElementById('cmd');
-        if(command.value == 'about' && command != null){
+        var str = command.toLowerCase();
+        if(str.value == 'about' && str != null){
             $.smoothScroll({
                 scrollTarget: '#page2'
             });
         }
-        if(command.value == 'email' && command != null){
+        if(str.value == 'email' && str != null){
             $.smoothScroll({
                 scrollTarget: '#page3'
             });
         }
-        if(command.value == 'resume' && command != null){
+        if(str.value == 'resume' && str != null){
             resume();
         }
     }

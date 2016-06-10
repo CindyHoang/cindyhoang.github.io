@@ -1,180 +1,65 @@
-<!DOCTYPE html>
-<head>
-    <title>Cindy Hoang</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal Website">
-    <meta name="Keywords" content="cindy hoang" />
-    <meta name="author" content="Cindy Hoang" />
-    <link rel="icon" href="img/glass.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
-    <link href="css/style.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <script src="js/modernizr.custom.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" href="css/animate.css">
-</head>
-<body>
-    <!-- Menu -->
-    <div class="menu-area">
-        <div id="dl-menu" class="dl-menuwrapper">
-            <button class="dl-trigger">Open Menu</button>
-				<ul class="dl-menu">
-				    <li><a href="#top">Home</a></li>
-				    <li><a href="#page2">About</a></li>
-                    <li><a href="#page3">Contact</a></li>
-                    <li><a href="http://cindyhoang.net/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-				</ul>
-        </div>
+	<!DOCTYPE html>
+	<head>
+		<title>Cindy Hoang</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+	<div id='body'>
+	<div id='body2'>
+	<center><h1>Hello world, I'm Cindy Hoang.</h1></center>
+	<div class="laptop">
+		<div class="content">
+			<div id="code">
+				<div id="shell">
+					Welcome, user! :)<br><br>
+					I'm currently installing some upgrades. In the meantime, feel free to check out my Resume or social media!<br>
+					(Type 'resume' || 'facebook' || 'twitter' || 'linkedin' || 'github')<br>
+					<input type="text" id="cmd" value="" onkeydown="if (event.keyCode == 13) giveCupcake();" autofocus style="font-family:'Monaco', 'Courier New'; color:#ffffff; background-color:#383737; border:0px" />
+				</div>
+			</div>
+		</div>
+		<div class="btm"></div>
 	</div>
-    <!-- Social Media Links -->
-    <div id="socialmedia">
-        <a href="https://twitter.com/SyncCindy" target="_blank" rel="noopener noreferrer"><img src="img/twitter.png" width="32"/></a>
-        <a href="http://www.linkedin.com/in/hoangcindy" target="_blank" rel="noopener noreferrer"><img src="img/linkedin.png" width="32"/></a>
-        <a href="https://www.facebook.com/TheCindyHoang" target="_blank" rel="noopener noreferrer"><img src="img/facebook.png" width="32"/></a>
-    </div>
-    <!-- Header -->
-    <div id="top">
-        <center>
-            <p class="wow bounceInDown"><br><br>Hello World, I'm Cindy Hoang.</p>
-        </center>
-    </div>
-    <!-- Page 1 -->
-    <div id="page1">
-        <div class="laptop">
-            <div class="content">
-                <div id="code">
-                    <div id="shell">
-                        Welcome to my personal website! Feel free to explore, or simply enter one of the following:<br>
-                        "about" for more About Me<br>
-                        "email" to Contact Me<br>
-                        "resume" for my Résumé<br>
-                        <h8 class="wow bounceInDown" data-wow-delay=".5s">></h8>
-                        <input type-"text" id="cmd" value="" onkeydown="if (event.keyCode == 13) banana();" autofocus style="font-family: 'Monaco', 'Courier New'; color:#ffffff; background-color: #383737; border: 0px"/>
-                    </div>
-                </div>
-            </div>
-            <div class="btm"></div>
-        </div>
-    </div>
-    <!-- Page 2 -->
-    <div id="page2">
-        <center>
-            <br>
-            <h7 class="wow bounceInDown" data-wow-delay="0s">A little bit about me.</h7><br><br>
-            <img src="img/mustache.png" class="wow flipInX" data-wow-delay=".5s" width="150"/><br>
-            <h7 class="wow zoomIn" data-wow-delay=".9s">Dreamer | Programmer | Tinkerer</h7>
-        </center>
-        <br>
-        <pew class="wow bounceInUp" data-wow-delay="1s">
-        <span>{Bio}</span>
-            <div id="jellybean">
-                <h11>I'm a first year at UC Merced majoring in <b>computer science</b>. I'm working on <b>design</b>, but I love to <b>problem solve</b> in general. You'll tend to catch me doing <b>web development</b> and <b>front-end design</b>, or just trying to learn everything.
-                <br><br>
-                I've worked as a Web Assistant for the <b>UC Merced Police Department</b>, Web Development and Design Intern at <b>I Am That Girl</b>, and Data Visualization Intern in the <b>UC Davis Genome Center</b>. I've also developed and designed websites for my high school's dance company <b>Soul Purpose</b> and community service organization <b>Key Club</b>.
-
-                </h11>
-            </div>
-            <span>{Skills}</span>
-            <div id="jellybean">
-                <h11><b>Web Development</b>
-                <br>
-                JavaScript, HTML, CSS, Liquid, Drupal
-                <br><br>
-                <b>Programming</b>
-                <br>
-                Java, C++, Python, R
-                <br><br>
-                <b>Music</b>
-                <br>
-                Pure Data, Reaper
-                </h11>
-            </div>
-            <span>{Work}</span>
-            <div id="jellybean"><center>
-            <a href="http://police.ucmerced.edu" target="_blank"><img src="img/ucpd.png" width="250"/></a>
-                <a href="http://iamthatgirl.com" target="_blank"><img src="img/iatg.png" width="250"/></a>
-                <a href="http://soulpurpose.github.io/" target="_blank"><img src="img/sp.png" width="250"/></a>
-                <a href="http://pgkeyclub.github.io/" target="_blank" ><img src="img/kc.png" width="250"/></a>
-                <a href="work/cityscroller/cityscroller.html" target="_blank"><img src="img/city.png" width="250"/></a>
-                <a href="work/fishtank/fishtank.html" target="_blank"><img src="img/fish.png" width="250"/></a>
-                </center>
-            </div>
-        </pew>
-    </div>
-    <!-- Page 3 -->
-    <div id="page3">
-        <div id="contact">
-            <center>
-                <br><h7 class="wow bounceInDown" data-wow-delay="0s">Say hi, take over the world, or talk code to me! (:</h7><br><br>
-            </center>
-        <div class="row">
-	  		<div class="col-md-offset-1 col-md-10">
-                <form class="form-horizontal" role="form" method="post" action="//formspree.io/cindynhoang@gmail.com">
-				        <div class="form-group">
-					       <div class="col-md-offset-2 col-md-8">
-                               <input type="text" class="form-control" name="name" placeholder="Name" style="font-family: 'Montserrat', sans-serif;">
-					       </div>
-				        </div>
-				        <div class="form-group">
-					       <div class="col-md-offset-2 col-md-8">
-					           <input type="email" class="form-control" name="_replyto" placeholder="Email" style="font-family: 'Montserrat', sans-serif;">
-					       </div>
-				        </div>
-				        <div class="form-group">
-					       <div class="col-md-offset-2 col-md-8">
-                                <input type="text" class="form-control" name="_subject" placeholder="Subject" style="font-family: 'Montserrat', sans-serif;">
-					       </div>
-				        </div>
-				        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-8">
-                                <textarea name="message" class="form-control" rows="3" placeholder="Message" style="font-family: 'Montserrat', sans-serif;"></textarea>
-                            </div>
-				        </div>
-				        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-8">
-                                <button type="submit" class="btn btn-theme btn-lg btn-block">Send message</button>
-                            </div>
-                        </div>
-				    </form>
-            </div>
-	  	</div>
-            <center><h7 class="wow bounceInUp" data-wow-delay=".5s">Sending me an email at cindynhoang@gmail.com works too.</h7></center>
-        </div>
-    </div>
-    
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/scrolltotop.js"></script>
-</body>
-
-<script>
-function banana(){
-        var command = document.getElementById('cmd');
-        if(command.value.toLowerCase() == 'about' && command != null){
-            $.smoothScroll({
-                scrollTarget: '#page2'
-            });
-        }
-        if(command.value.toLowerCase() == 'email' && command != null){
-            $.smoothScroll({
-                scrollTarget: '#page3'
-            });
-        }
-        if(command.value.toLowerCase() == 'resume' && command != null){
-            resume();
-        }
-    }
-    function resume(){
-        var win = window.open('http://cindyhoang.net/resume.pdf', '_blank');
-        win.focus();
-    }
-</script>
-
-<script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.smooth-scroll.min.js"></script>
-	<script src="js/jquery.dlmenu.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/custom.js"></script>
-</html>
+	</div>
+	</div>
+	</body>
+	<script>
+		function giveCupcake(){
+			var command = document.getElementById('cmd');
+			if(command != null){
+				if(command.value.toLowerCase() == 'facebook'){
+					document.body.style.backgroundColor = "#8b9dc3";
+					var win = window.open('https://facebook.com/TheCindyHoang', '_blank');
+					win.focus();
+				}
+				if(command.value.toLowerCase() == 'twitter'){
+					document.body.style.backgroundColor = "#55acee";
+					var win = window.open('https://twitter.com/cindynhoang', '_blank');
+					win.focus();
+				}
+				if(command.value.toLowerCase() == 'linkedin'){
+					document.body.style.backgroundColor = "#0077b5";
+					var win = window.open('https://linkedin.com/in/hoangcindy', '_blank');
+					win.focus();
+				}
+				if(command.value.toLowerCase() == 'github'){
+					document.body.style.backgroundColor = "#000000";
+					var win = window.open('https://github.com/cindyhoang', '_blank');
+					win.focus();
+				}
+				if(command.value.toLowerCase() == 'resume'){
+					document.body.style.backgroundColor = "#f1a9a0";
+					var win = window.open('http://cindyhoang.net/resume.pdf', '_blank');
+        			win.focus();
+				}
+			}
+		}
+		/*window.onscroll = function(){
+			var scroll = window.scrollY;
+			$('#body2').css('left', '-' + scroll + 'px');
+		}*/
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type='text/javascript' src='/js/jquery.mousewheel.min.js'></script>
+	</html>

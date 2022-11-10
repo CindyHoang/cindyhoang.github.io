@@ -14,7 +14,7 @@
 				<div id="shell">
 					Welcome, user! :D<br><br>
 					I'm currently installing some updates to my website. In the meantime, feel free to check out my Resume or social media!<br><br>
-					(Type 'resume' || 'facebook' || 'twitter' || 'linkedin' || 'github')<br>
+					(Type 'resume' || 'twitter' || 'linkedin' || 'github')<br>
 					<input type="text" id="cmd" value="" onkeydown="if (event.keyCode == 13) giveCupcake();" autofocus style="font-family:'Monaco', 'Courier New'; color:#ffffff; background-color:#383737; border:0px" />
 				</div>
 			</div>
@@ -28,11 +28,6 @@
 		function giveCupcake(){
 			var command = document.getElementById('cmd');
 			if(command != null){
-				if(command.value.toLowerCase() == 'facebook'){
-					document.body.style.backgroundColor = "#8b9dc3";
-					var win = window.open('https://facebook.com/TheCindyHoang', '_blank');
-					win.focus();
-				}
 				if(command.value.toLowerCase() == 'twitter'){
 					document.body.style.backgroundColor = "#79bcee";
 					var win = window.open('https://twitter.com/cindynhoang', '_blank');
